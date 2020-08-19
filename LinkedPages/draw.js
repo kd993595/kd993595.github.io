@@ -1,12 +1,12 @@
 const canvas = document.querySelector(".canvas");
-//const ctx=canvas.getContext("2d");
-/*const scale = 10;
+const ctx=canvas.getContext("2d");
+const scale = 10;
 const rows = canvas.height /scale;
-const columns = canvas.width /scale;*/
-console.log(canvas);
-//var snake;
+const columns = canvas.width /scale;
 
-/*(function setup{
+var snake;
+
+(function setup{
 	snake = new Snake();
 	snake.draw();
-}());*/
+}());

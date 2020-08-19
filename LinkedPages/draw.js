@@ -8,5 +8,10 @@ var snake;
 
 (function setup{
 	snake = new Snake();
-	snake.draw();
-}());
+
+
+	window.setInterval(()=>{
+		snake.update();
+		snake.draw();
+	}, 250);
+});

@@ -11,7 +11,12 @@ var snake;
 
 
 	window.setInterval(()=>{
+		ctx.clearRect(0,0,canvas.width,canvas.height);
 		snake.update();
 		snake.draw();
 	}, 250);
-});
+}());
+
+window.addEventListener('keydown',((evt)=>{
+	console.log(evt);
+}))

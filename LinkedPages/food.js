@@ -1,4 +1,4 @@
-import {onSnake,expandSnake}from './snake.js'
+import {onSnake, expandSnake} from './snake.js'
 
 let food={x:10,y:1}
 const EXPANSION_RATE = 1

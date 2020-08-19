@@ -6,7 +6,7 @@ const columns = canvas.width /scale;
 
 var snake;
 
-(function setup{
-	snake=  new Snake();
+/*(function setup{
+	snake = new Snake();
 	snake.draw();
-}());
+}());*/

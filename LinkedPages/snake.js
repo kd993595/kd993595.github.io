@@ -8,7 +8,7 @@ export function update(){
 	addSegments()
 
 	const inputDirection = getInputDirection()
-	for(let i = snakeBody.length - 2; i >= 0; i++){
+	for(let i = snakeBody.length - 2; i >= 0; i--){
 		snakeBody[i+1] = { ...snakeBody[i]}
 	}
 
@@ -34,7 +34,7 @@ export function expandSnake(amount){
 
 export function onSnake(position, {ignoreHead=false}={}){
 	return snakeBody.some((segment,index) =>{
-		if(ignoreHead && index==0)return false
+		if(ignoreHead && index===0)return false
 		return equalPositions(segment, position)
 	})
 }

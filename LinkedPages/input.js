@@ -24,43 +24,64 @@ window.addEventListener('keydown',e=>{
 export function getInputDirection(){
 	lastInputDirection = inputDirection
 	return inputDirection
-};
-window.addEventListener('touchstart',handleTouchStart,false);
-window.addEventListener('touchmove',handleTouchMove,false);
-var xDown=null;
-var yDown =null;
-
-function getTouches(evt){
-	return evt.touches || evt.originalEvent.touches;
 }
 
-function handleTouchStart(evt){
-	const firstTouch = getTouches(evt[0]);
-	xDown = firstTouch.clientX;
-	yDown = firstTouch.clientY;
-};
-function handleTouchMove(evt){
-	if(!xDown||!yDown){
-		return
-	}
-	var xUp = evt.touches[o].clientX;
-	var yUp = evt.touches[0].clientY;
-	var xDiff = xDown - xUp;
-	var yDiff = yDown-yUp;
+function swipedetect(el,callback){
+	var touchsurface = el,swipedir,startX,startY,distX,distY,
+	threshold=150,//required min distance to be considered swipe
+	restraint = 100,//maximum distance allowed at same time in perpendicular direction
+	allowedTime = 300,//maximum time allowed to travel that distance
+	elapsedTime,startTime,
+	handleswipe = callback||function(swipedir){}
 
-	if(Math.abs(xDiff)>Math.abs(yDiff)){
-		if(xDiff>0){
-			//left swipe
-		}else{
-			//right swipe
+	touchsurface.addEventListener('touchstart',function(e){
+		var touchobj = e.changedTouches[0]
+		swipedir = 'none'
+		dist=0
+		startX = touchobj.pageX
+		startY = touchobj.pageY
+		startTime = new Date().getTime()//record time when finger first makes contact with surface
+		e.preventDefault()		
+	},false)
+	touchsurface.addEventListener('touchmove',function(e){
+		e.preventDefault()//prevent scrolling when inside DIV
+	},false)
+
+	touchsurface.addEventListener('touchend',function(e){
+		var touchobj = e.changedTouches[0]
+		distX = touchobj.pageX - startX
+		distY = touchobj.pageY - startY
+		elapsedTime = new Date().getTime() - startTime
+		if(elapsedTime <= allowedTime){
+			if(Math.abs(distX)>=threshold && Math.abs(distY)<=restraint){
+				swipedir = (distX<0)? 'left':'right'
+			}else if(Math.abs(distY)>=threshold && Math.abs(distX)<=restraint){
+				swipedir = (distY<0)? 'up':'down'
+			}
 		}
-	}else{
-		if(yDiff>0){
-			//upswipe
-		}else{
-			//down swipe
-		}
+		handleswipe(swipedir)
+		e.preventDefault()
+	},false)
+}
+
+var el = document.getElementById('game-board')
+swipedetect(el,function(swipedir){
+	switch(swipedir){
+		case 'left':
+			if(lastInputDirection.x!==0)break
+			inputDirection = {x:-1,y:0}
+			break
+		case 'right':
+			if(lastInputDirection.x!==0)break
+			inputDirection = {x:1,y:0}
+			break
+		case 'up':
+			if(lastInputDirection.y!==0)break
+			inputDirection = {x:0,y:-1}
+			break
+		case 'down':
+			if(lastInputDirection.y!==0)break
+			inputDirection = {x:0,y:1}
+			break
 	}
-	xDown = null;
-	yDown = null;
-};
+})

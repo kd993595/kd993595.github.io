@@ -27,7 +27,12 @@ export function getInputDirection(){
 }
 
 function swipedetect(el,callback){
-	var touchsurface = el,swipedir,startX,startY,distX,distY,
+	var touchsurface = el,
+	swipedir,
+	startX,
+	startY,
+	distX,
+	distY,
 	threshold=150,//required min distance to be considered swipe
 	restraint = 100,//maximum distance allowed at same time in perpendicular direction
 	allowedTime = 300,//maximum time allowed to travel that distance
@@ -37,7 +42,7 @@ function swipedetect(el,callback){
 	touchsurface.addEventListener('touchstart',function(e){
 		var touchobj = e.changedTouches[0]
 		swipedir = 'none'
-		dist=0
+		//dist = 0
 		startX = touchobj.pageX
 		startY = touchobj.pageY
 		startTime = new Date().getTime()//record time when finger first makes contact with surface
@@ -85,3 +90,5 @@ swipedetect(el,function(swipedir){
 			break
 	}
 })
+
+

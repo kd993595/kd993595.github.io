@@ -1,0 +1,221 @@
+[data-theme="light"] {
+    --color-heading-text: rgb(59 130 246);
+    --color-bg: #ffffff;
+    --color-border: rgb(209 213 219);
+    --color-profile: #d1d5db;
+    --color-nav-hover: #ddd;
+    --color-collapse-hover: rgb(209 213 219);
+    --color-text: #151515;
+    --color-highlight: #f1f1f1;
+
+}
+
+[data-theme="dark"] {
+    --color-heading-text: rgb(253 224 71);
+    --color-bg: #1c1917;
+    --color-border: rgb(55 65 81);
+    --color-profile: rgb(41 37 36);
+    --color-nav-hover: rgb(31 41 55);
+    --color-collapse-hover: rgb(41 37 36);
+    --color-text: #ebebeb;
+    --color-highlight: #1e1e1e;
+}
+
+body {
+    background-color: var(--color-bg);
+}
+
+main {
+    display: flex;
+    height: 100dvh;
+    padding: 10px;
+    padding-top: 0;
+    justify-content: center;
+}
+
+h1,
+h2,
+h3,
+p,li,h4 {
+    color: var(--color-text)
+}
+
+section {
+    width: 50%;
+}
+
+.collapsible {
+    background-color: transparent;
+    color: var(--color-heading-text);
+    cursor: pointer;
+    padding: 18px;
+    border: none;
+    text-align: left;
+    align-items: center;
+    outline: none;
+    font-size: 20px;
+    width: 100%;
+    display: flex;
+    border-radius: 10px;
+}
+
+.collapsible:hover {
+    background-color: var(--color-collapse-hover);
+}
+
+
+.collapsible>svg {
+    width: 35px;
+    height: 35px;
+    padding-right: 5px;
+}
+
+.content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: transparent;
+}
+
+#profilebox {
+    width: 22%;
+    min-width: 250px;
+    height: 80%;
+    background-color: var(--color-profile);
+    margin-right: 10px;
+    text-align: center;
+    min-height: 500px;
+    border-radius: 5px;
+}
+
+#imgbox {
+    justify-content: center;
+    width: 100%;
+    max-width: 250px;
+    aspect-ratio: 1/1;
+    padding: 10px;
+    padding-top: 20px;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+nav {
+    background-color: transparent;
+    overflow: hidden;
+    margin-bottom: 15px;
+    width: 72%;
+    margin-left: auto;
+    margin-right: auto;
+    border-color: var(--color-border);
+    border-bottom-style: solid;
+    border-width: 1px;
+    margin-top: 5px;
+}
+
+
+nav a {
+    float: left;
+    color: var(--color-heading-text);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    border-radius: 10px;
+    margin-right: 5px;
+}
+
+
+nav a:hover {
+    background-color: var(--color-nav-hover);
+    color: var(--color-heading-text);
+}
+
+
+
+#modebtn {
+    padding: 0;
+    cursor: pointer;
+    color: var(--color-heading-text);
+    background-color: transparent;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    margin-right: 0;
+    margin-top: .5em;
+    float: right;
+    width: 2em;
+    height: 2em;
+}
+
+svg {
+    width: 100%;
+    height: 100%;
+    color: var(--color-heading-text);
+}
+
+#iconspan {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.icon-container {
+    width: 30px;
+    height: 30px;
+    color: var(--color-heading-text);
+}
+
+h4{
+    text-decoration: underline;
+    font-size: large;
+    margin: 0;
+    font-weight: normal;
+}
+
+p a,li a{
+    text-decoration: none;
+}
+
+@media screen and (max-width: 600px) {
+    main {
+        display: block;
+    }
+
+    .collapsible {
+        background-color: var(--color-highlight);
+    }
+
+    #profilebox {
+        width: 100%;
+        height: fit-content;
+        margin-right: auto;
+        margin-left: auto;
+        min-height: 0;
+        margin-bottom: 5px;
+        padding-bottom: 10px;
+    }
+
+    section {
+        width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    #imgbox {
+        max-width: 200px;
+    }
+
+    nav {
+        width: 90%;
+
+    }
+}

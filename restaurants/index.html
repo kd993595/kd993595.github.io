@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Restaurant Journey</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Crimson+Text:wght@400;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="./style.css" />
+  <script src="./main.js" defer></script>
+  <link rel="icon" type="image/x-icon" href="./restaurant-icon.png">
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>Pat &amp; Kev Culinary Adventures</h1>
+      <p id="subtitle">
+        <object width="20px" height="20px" data="./svg/food.svg"></object>
+        = food
+        <object width="20px" height="20px" data="./svg/money.svg"></object>
+        = pricing
+        <object width="20px" height="20px" data="./svg/home.svg"></object>
+        = ambiance
+        <object width="20px" height="20px" data="./svg/people.svg"></object>
+        = service
+        <object width="20px" height="20px" data="./svg/car.svg"></object>
+        = accessibility
+      </p>
+    </header>
+
+    <div class="search-container">
+      <input type="text" class="search-box" id="searchInput"
+        placeholder="Search restaurants by name or description..." />
+    </div>
+
+    <div class="grid" id="restaurantGrid">
+      <!-- restaurants -->
+
+      <section class="card" data-search="himalayan curry house indian">
+        <div class="card-header">
+          <h2 class="restaurant-name">Himalayan Curry House</h2>
+          <p class="address">
+            254 W 108th St, New York, NY 10025
+            <button type="button" class="clipboard">
+              <img src="./svg/clipboard.svg" alt="clipboard">
+            </button>
+          </p>
+
+          <span class="rating food">7.9</span>
+          <span class="rating money">9.0</span>
+          <span class="rating ambience">4.5</span>
+          <span class="rating service">8.0</span>
+          <span class="rating access">8.5</span>
+        </div>
+
+        <p class="description">Hole in the wall on the upper west side. </p>
+      </section>
+
+      <section class="card" data-search="tom diner american">
+        <div class="card-header">
+          <h2 class="restaurant-name">Tom's Diner</h2>
+          <p class="address">
+            2880 Broadway, New York, NY 10025
+            <button type="button" class="clipboard">
+              <img src="./svg/clipboard.svg" alt="clipboard">
+            </button>
+          </p>
+
+          <span class="rating food">7.9</span>
+          <span class="rating money">9.0</span>
+          <span class="rating ambience">4.5</span>
+          <span class="rating service">8.0</span>
+          <span class="rating access">8.5</span>
+        </div>
+
+        <p class="description">American Diner on Broadway</p>
+      </section>
+
+      <section class="card" data-search="asian wu and nussbaum">
+        <div class="card-header">
+          <h2 class="restaurant-name">Wu and Nussbaum</h2>
+          <p class="address">
+            2897 Broadway, New York, NY 10025
+            <button type="button" class="clipboard">
+              <img src="./svg/clipboard.svg" alt="clipboard">
+            </button>
+          </p>
+
+          <span class="rating food">7.9</span>
+          <span class="rating money">9.0</span>
+          <span class="rating ambience">4.5</span>
+          <span class="rating service">8.0</span>
+          <span class="rating access">8.5</span>
+        </div>
+
+        <p class="description">Asian place serving dumplings and peanut noodles.</p>
+      </section>
+
+      <section class="card" data-search="asian kyuramen">
+        <div class="card-header">
+          <h2 class="restaurant-name">Kyuramen</h2>
+          <p class="address">
+            2787 Broadway, New York, NY 10025
+            <button type="button" class="clipboard">
+              <img src="./svg/clipboard.svg" alt="clipboard">
+            </button>
+          </p>
+
+          <span class="rating food">7.9</span>
+          <span class="rating money">9.0</span>
+          <span class="rating ambience">4.5</span>
+          <span class="rating service">8.0</span>
+          <span class="rating access">8.5</span>
+        </div>
+
+        <p class="description">Asian place with good food and thai ice tea.</p>
+      </section>
+
+      <section class="card" data-search="peruvian pio">
+        <div class="card-header">
+          <h2 class="restaurant-name">Pio Pio 6</h2>
+          <p class="address">
+            702 Amsterdam Ave, New York, NY 10025
+            <button type="button" class="clipboard">
+              <img src="./svg/clipboard.svg" alt="clipboard">
+            </button>
+          </p>
+
+          <span class="rating food">7.9</span>
+          <span class="rating money">9.0</span>
+          <span class="rating ambience">4.5</span>
+          <span class="rating service">8.0</span>
+          <span class="rating access">8.5</span>
+        </div>
+
+        <p class="description">Peruvian place with good lunch special.</p>
+      </section>
+
+
+      <section class="card" data-search="serafina italian">
+        <div class="card-header">
+          <h2 class="restaurant-name">Serafina</h2>
+          <p class="address">
+            2737 Broadway, New York, NY 10025
+            <button type="button" class="clipboard">
+              <img src="./svg/clipboard.svg" alt="clipboard">
+            </button>
+          </p>
+
+          <span class="rating food">7.9</span>
+          <span class="rating money">9.0</span>
+          <span class="rating ambience">4.5</span>
+          <span class="rating service">8.0</span>
+          <span class="rating access">8.5</span>
+        </div>
+
+        <p class="description">Fancy italian place.</p>
+      </section>
+
+      <section class="card" data-search="kesari indian">
+        <div class="card-header">
+          <h2 class="restaurant-name">Kesari indian</h2>
+          <p class="address">
+            2701 Broadway, New York, NY 10025
+            <button type="button" class="clipboard">
+              <img src="./svg/clipboard.svg" alt="clipboard">
+            </button>
+          </p>
+
+          <span class="rating food">7.9</span>
+          <span class="rating money">9.0</span>
+          <span class="rating ambience">4.5</span>
+          <span class="rating service">8.0</span>
+          <span class="rating access">8.5</span>
+        </div>
+
+        <p class="description">good indian spot.</p>
+      </section>
+
+      <section class="card" data-search="chinese ollie noodle">
+        <div class="card-header">
+          <h2 class="restaurant-name">Ollie Chinese noodle shop</h2>
+          <p class="address">
+            2705 Broadway, New York, NY 10025
+            <button type="button" class="clipboard">
+              <img src="./svg/clipboard.svg" alt="clipboard">
+            </button>
+          </p>
+
+          <span class="rating food">7.9</span>
+          <span class="rating money">9.0</span>
+          <span class="rating ambience">4.5</span>
+          <span class="rating service">8.0</span>
+          <span class="rating access">8.5</span>
+        </div>
+
+        <p class="description">cheap chinese place with big dishes.</p>
+      </section>
+
+      <section class="card" data-search="hawksmoor london roast">
+        <div class="card-header">
+          <h2 class="restaurant-name">Hawksmoor</h2>
+          <p class="address">
+            109 E 22nd St, New York, NY 10010
+            <button type="button" class="clipboard">
+              <img src="./svg/clipboard.svg" alt="clipboard">
+            </button>
+          </p>
+
+          <span class="rating food">7.9</span>
+          <span class="rating money">9.0</span>
+          <span class="rating ambience">4.5</span>
+          <span class="rating service">8.0</span>
+          <span class="rating access">8.5</span>
+        </div>
+
+        <p class="description">Sunday Roast!</p>
+      </section>
+
+      <div class="no-results" id="noResults" style="display: none">
+        No restaurants found. Try a different search!
+      </div>
+    </div>
+</body>
+
+</html>

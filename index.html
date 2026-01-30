@@ -1,184 +1,252 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
-    <link rel="stylesheet" href="./normalize.css">
-    <link rel="stylesheet" href="./style.css">
-    <script src="./main.js"></script>
-    <title>Kevin Durand</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kevin Durand Portfolio</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600;700&family=Fira+Code:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="./style.css">
+  <script type="text/javascript" src="./main.js" defer></script>
 </head>
-<!-- https://icons.getbootstrap.com/?q=file#usage icons!!! -->
 
 <body>
-    <nav>
-        <a href="#">Home</a>
-        <!-- <a href="#">Blog</a> -->
-        <button onclick="toggleMode()" id="modebtn">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sun-fill"
-                viewBox="0 0 16 16">
-                <path
-                    d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708" />
-            </svg>
-        </button>
-    </nav>
-    <main>
-        <aside id="profilebox">
-            <div id="imgbox">
-                <img src="./images/me.JPG" alt="profile photo">
-            </div>
-            <h1>Kevin Durand</h1>
-            <h2>Software Engineer</h2>
-            <h3>New York City, NY</h3>
-            <div id="iconspan">
-                <div class="icon-container">
-                    <a href="https://github.com/kd993595" target="_blank" title="Github Profile Page">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-github" viewBox="0 0 16 16">
-                            <path
-                                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8" />
-                        </svg>
-                    </a>
-                </div>
-                <div class="icon-container">
-                    <a href="https://www.linkedin.com/in/kevin-durand-42310b2a4/" target="_blank" title="Linked Profile">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-linkedin" viewBox="0 0 16 16">
-                            <path
-                                d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
-                        </svg>
-                    </a>
-                </div>
-                <div class="icon-container">
-                    <a href="https://ch.tetr.io/u/platinumkev17" target="_blank" title="Tetris Account">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-controller" viewBox="0 0 16 16">
-                            <path
-                                d="M11.5 6.027a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0m-1.5 1.5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1m2.5-.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0m-1.5 1.5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1m-6.5-3h1v1h1v1h-1v1h-1v-1h-1v-1h1z" />
-                            <path
-                                d="M3.051 3.26a.5.5 0 0 1 .354-.613l1.932-.518a.5.5 0 0 1 .62.39c.655-.079 1.35-.117 2.043-.117.72 0 1.443.041 2.12.126a.5.5 0 0 1 .622-.399l1.932.518a.5.5 0 0 1 .306.729q.211.136.373.297c.408.408.78 1.05 1.095 1.772.32.733.599 1.591.805 2.466s.34 1.78.364 2.606c.024.816-.059 1.602-.328 2.21a1.42 1.42 0 0 1-1.445.83c-.636-.067-1.115-.394-1.513-.773-.245-.232-.496-.526-.739-.808-.126-.148-.25-.292-.368-.423-.728-.804-1.597-1.527-3.224-1.527s-2.496.723-3.224 1.527c-.119.131-.242.275-.368.423-.243.282-.494.575-.739.808-.398.38-.877.706-1.513.773a1.42 1.42 0 0 1-1.445-.83c-.27-.608-.352-1.395-.329-2.21.024-.826.16-1.73.365-2.606.206-.875.486-1.733.805-2.466.315-.722.687-1.364 1.094-1.772a2.3 2.3 0 0 1 .433-.335l-.028-.079zm2.036.412c-.877.185-1.469.443-1.733.708-.276.276-.587.783-.885 1.465a14 14 0 0 0-.748 2.295 12.4 12.4 0 0 0-.339 2.406c-.022.755.062 1.368.243 1.776a.42.42 0 0 0 .426.24c.327-.034.61-.199.929-.502.212-.202.4-.423.615-.674.133-.156.276-.323.44-.504C4.861 9.969 5.978 9.027 8 9.027s3.139.942 3.965 1.855c.164.181.307.348.44.504.214.251.403.472.615.674.318.303.601.468.929.503a.42.42 0 0 0 .426-.241c.18-.408.265-1.02.243-1.776a12.4 12.4 0 0 0-.339-2.406 14 14 0 0 0-.748-2.295c-.298-.682-.61-1.19-.885-1.465-.264-.265-.856-.523-1.733-.708-.85-.179-1.877-.27-2.913-.27s-2.063.091-2.913.27" />
-                        </svg>
-                    </a>
-                </div>
-                <div class="icon-container">
-                    <a href="/assets/Resume.pdf" target="_blank" title="Resume Copy">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-file-earmark-text-fill" viewBox="0 0 16 16">
-                            <path
-                                d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0M9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1M4.5 9a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zM4 10.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 1 0-1h4a.5.5 0 0 1 0 1z" />
-                        </svg>
-                    </a>
-                </div>
-                <div class="icon-container">
-                    <a href="mailto:kpd2136@columbia.edu" title="Email">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-at-fill" viewBox="0 0 16 16">
-                            <path d="M2 2A2 2 0 0 0 .05 3.555L8 8.414l7.95-4.859A2 2 0 0 0 14 2zm-2 9.8V4.698l5.803 3.546zm6.761-2.97-6.57 4.026A2 2 0 0 0 2 14h6.256A4.5 4.5 0 0 1 8 12.5a4.49 4.49 0 0 1 1.606-3.446l-.367-.225L8 9.586zM16 9.671V4.697l-5.803 3.546.338.208A4.5 4.5 0 0 1 12.5 8c1.414 0 2.675.652 3.5 1.671"/>
-                            <path d="M15.834 12.244c0 1.168-.577 2.025-1.587 2.025-.503 0-1.002-.228-1.12-.648h-.043c-.118.416-.543.643-1.015.643-.77 0-1.259-.542-1.259-1.434v-.529c0-.844.481-1.4 1.26-1.4.585 0 .87.333.953.63h.03v-.568h.905v2.19c0 .272.18.42.411.42.315 0 .639-.415.639-1.39v-.118c0-1.277-.95-2.326-2.484-2.326h-.04c-1.582 0-2.64 1.067-2.64 2.724v.157c0 1.867 1.237 2.654 2.57 2.654h.045c.507 0 .935-.07 1.18-.18v.731c-.219.1-.643.175-1.237.175h-.044C10.438 16 9 14.82 9 12.646v-.214C9 10.36 10.421 9 12.485 9h.035c2.12 0 3.314 1.43 3.314 3.034zm-4.04.21v.227c0 .586.227.8.581.8.31 0 .564-.17.564-.743v-.367c0-.516-.275-.708-.572-.708-.346 0-.573.245-.573.791"/>
-                          </svg>
-                    </a>
-                </div>
-            </div>
-        </aside>
-        <section>
-            <div class="boxes">
-                <button class="collapsible"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                        fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
-                        <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
-                    </svg>About Me</button>
-                <div class="content">
-                    <p>I'm currently a student studying computer science at Columbia University.</p>
-                </div>
-            </div>
-            <div class="boxes">
-                <button class="collapsible"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                        fill="currentColor" class="bi bi-person-workspace" viewBox="0 0 16 16">
-                        <path d="M4 16s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-5.95a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5" />
-                        <path
-                            d="M2 1a2 2 0 0 0-2 2v9.5A1.5 1.5 0 0 0 1.5 14h.653a5.4 5.4 0 0 1 1.066-2H1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v9h-2.219c.554.654.89 1.373 1.066 2h.653a1.5 1.5 0 0 0 1.5-1.5V3a2 2 0 0 0-2-2z" />
-                    </svg>Experience</button>
-                <div class="content">
-                    <h4>Research Software Engineer Intern</h4>
-                    <p>Summer 2025 - <a href="https://www.voloridge.com/">Voloridge</a></p>
-                    <ul>
-                        <li>Optimize systems to perform data analysis from data pipeline</li>
-                        <li>Created new tooling using C++ for visualization of data</li>
-                    </ul>
-                    <h4>Research Lab Assistant</h4>
-                    <p>Fall 2024 - <a href="https://lab.history.columbia.edu/">History Lab</a></p>
-                    <ul>
-                        <li>Create Knowledge Graph from existing entity relationship data</li>
-                        <li>Aggregate and connect information from sources such as <a
-                                href="https://www.wikidata.org/wiki/Wikidata:Main_Page">Wikidata</a></li>
-                        <li>Create RAG pipeline from Knowledge Graph for natural language querying</li>
-                    </ul>
-                    <h4>Freelancing</h4>
-                    <p>Summer 2024 - <a href="https://www.dataannotation.tech/">Data Annotation Tech</a></p>
-                    <ul>
-                        <li>Compare LLM model output to determine model accuracy and quality</li>
-                        <li>Fix and improve code quality from LLM model in various programming languages</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="boxes">
-                <button class="collapsible"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                        fill="currentColor" class="bi bi-mortarboard" viewBox="0 0 16 16">
-                        <path
-                            d="M8.211 2.047a.5.5 0 0 0-.422 0l-7.5 3.5a.5.5 0 0 0 .025.917l7.5 3a.5.5 0 0 0 .372 0L14 7.14V13a1 1 0 0 0-1 1v2h3v-2a1 1 0 0 0-1-1V6.739l.686-.275a.5.5 0 0 0 .025-.917zM8 8.46 1.758 5.965 8 3.052l6.242 2.913z" />
-                        <path
-                            d="M4.176 9.032a.5.5 0 0 0-.656.327l-.5 1.7a.5.5 0 0 0 .294.605l4.5 1.8a.5.5 0 0 0 .372 0l4.5-1.8a.5.5 0 0 0 .294-.605l-.5-1.7a.5.5 0 0 0-.656-.327L8 10.466zm-.068 1.873.22-.748 3.496 1.311a.5.5 0 0 0 .352 0l3.496-1.311.22.748L8 12.46z" />
-                    </svg>Education</button>
-                <div class="content">
-                    <h4>B.S. in Computer Science</h4>
-                    <p>2022 - 2024, <a href="https://www.columbia.edu/">Columbia University</a></p>
-                </div>
-            </div>
-            <div class="boxes">
-                <button class="collapsible"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-code-square" viewBox="0 0 16 16">
-                        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
-                        <path d="M6.854 4.646a.5.5 0 0 1 0 .708L4.207 8l2.647 2.646a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 0 1 .708 0m2.292 0a.5.5 0 0 0 0 .708L11.793 8l-2.647 2.646a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708 0" />
-                    </svg>Projects</button>
-                <div class="content">
-                    <h4><a href="https://github.com/treeform-system/rootdb">RootDB</a></h4>
-                    <ul>
-                        <li>Embedded Relational Database</li>
-                        <li>Written in pure Golang with zero dependencies</li>
-                        <li>Modular system to provide higher customizability than SQLite</li>
-                    </ul>
-                    <h4><a href="https://github.com/kd993595/pacmanMachineLearning">Pacman Machine Learning</a></h4>
-                    <ul>
-                        <li>Training pacman agents using Deep Q-learning and NEAT-ai for neural network agents</li>
-                    </ul>
-                    <h4><a href="https://github.com/kd993595/MonkeyInterpreter">Monkey Language Interpreter</a></h4>
-                    <ul>
-                        <li>Language Interpreter including tokenizer, parser, and AST evaluation in Golang following the
-                            book</li>
-                    </ul>
-                    <h4><a href="https://github.com/kd993595/prefix-complete">Haskell SAT Solver</a></h4>
-                    <ul>
-                        <li>Haskell program that takes in cnf file for boolean expression and determines Satisfiability</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="boxes">
-                <button class="collapsible"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                        fill="currentColor" class="bi bi-gear-wide-connected" viewBox="0 0 16 16">
-                        <path
-                            d="M7.068.727c.243-.97 1.62-.97 1.864 0l.071.286a.96.96 0 0 0 1.622.434l.205-.211c.695-.719 1.888-.03 1.613.931l-.08.284a.96.96 0 0 0 1.187 1.187l.283-.081c.96-.275 1.65.918.931 1.613l-.211.205a.96.96 0 0 0 .434 1.622l.286.071c.97.243.97 1.62 0 1.864l-.286.071a.96.96 0 0 0-.434 1.622l.211.205c.719.695.03 1.888-.931 1.613l-.284-.08a.96.96 0 0 0-1.187 1.187l.081.283c.275.96-.918 1.65-1.613.931l-.205-.211a.96.96 0 0 0-1.622.434l-.071.286c-.243.97-1.62.97-1.864 0l-.071-.286a.96.96 0 0 0-1.622-.434l-.205.211c-.695.719-1.888.03-1.613-.931l.08-.284a.96.96 0 0 0-1.186-1.187l-.284.081c-.96.275-1.65-.918-.931-1.613l.211-.205a.96.96 0 0 0-.434-1.622l-.286-.071c-.97-.243-.97-1.62 0-1.864l.286-.071a.96.96 0 0 0 .434-1.622l-.211-.205c-.719-.695-.03-1.888.931-1.613l.284.08a.96.96 0 0 0 1.187-1.186l-.081-.284c-.275-.96.918-1.65 1.613-.931l.205.211a.96.96 0 0 0 1.622-.434zM12.973 8.5H8.25l-2.834 3.779A4.998 4.998 0 0 0 12.973 8.5m0-1a4.998 4.998 0 0 0-7.557-3.779l2.834 3.78zM5.048 3.967l-.087.065zm-.431.355A4.98 4.98 0 0 0 3.002 8c0 1.455.622 2.765 1.615 3.678L7.375 8zm.344 7.646.087.065z" />
-                    </svg>Skills</button>
-                <div class="content">
-                    <h4>Programming Languages</h4>
-                    <p>Python, Golang, C/C++, Javascript, Haskell, C#, SQL, Java</p>
-                    <h4>Software Tools</h4>
-                    <p>Git, Docker, Database engines (ie. MYSQL, Postgres), Neo4j, MongoDB</p>
-                    <h4>Fluent Languages</h4>
-                    <p>English, Spanish</p>
-                </div>
-            </div>
-        </section>
 
-    </main>
+  <div class="container">
+    <div class="query-display">
+      <span class="keyword">SELECT</span> *
+      <span class="keyword">FROM</span> <span class="table-name">developers</span>
+      <span class="keyword">WHERE</span> name <span class="operator">=</span> <span style="color: var(--green);">"Kevin
+        Durand"</span>
+      <span class="keyword">AND</span> skills <span class="operator">LIKE</span> <span
+        style="color: var(--green);">'%all%'</span><span class="operator">;</span>
+      <span class="cursor-blink"></span>
+    </div>
+
+    <div class="content-grid">
+      <!-- Profile Table -->
+      <aside class="profile-table">
+        <div class="table-header">
+          <span>TABLE: user_profile</span>
+          <span class="row-count">1 row</span>
+        </div>
+        <div class="profile-image">
+          <img id="personal-image" src="./images/me.jpg" alt="picture of kevin durand">
+        </div>
+        <div class="table-body">
+          <div class="table-row">
+            <div class="table-cell field">name</div>
+            <div class="table-cell value name">Kevin Durand</div>
+          </div>
+          <div class="table-row">
+            <div class="table-cell field">title</div>
+            <div class="table-cell value">Software Engineer</div>
+          </div>
+          <div class="table-row">
+            <div class="table-cell field">location</div>
+            <div class="table-cell value">New York City, NY</div>
+          </div>
+          <div class="table-row">
+            <div class="table-cell field">status</div>
+            <div class="table-cell value" style="color: var(--green);">● ACTIVE</div>
+          </div>
+          <div class="table-row">
+            <div class="table-cell field">links</div>
+            <div class="table-cell value">
+              <div class="social-links">
+                <a href="https://github.com/kd993595" class="social-link">GitHub</a>
+                <a href="https://www.linkedin.com/in/kevin-durand-42310b2a4/" class="social-link">LinkedIn</a>
+                <a href="https://kd993595.github.io/assets/Resume.pdf" class="social-link">Resume</a>
+                <a href="https://ch.tetr.io/u/platinumkev17" class="social-link">Tetris</a>
+                <a href="mailto:kpd2136@columbia.edu" class="social-link">Email</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Main Data Section -->
+      <main class="data-section">
+        <!-- About Me Table -->
+        <div class="data-table" id="about-table">
+          <div class="table-header" onclick="toggleTable('about-table')">
+            <span>SELECT * FROM portfolio WHERE section = 'about_me';</span>
+            <span class="row-count">1 row</span>
+          </div>
+          <div class="table-content">
+            <div class="record" data-row="1">
+              <div class="record-description">
+                Currently a student studying Computer Science at Columbia University.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experience Table -->
+        <div class="data-table" id="experience-table">
+          <div class="table-header" onclick="toggleTable('experience-table')">
+            <span>SELECT * FROM portfolio WHERE section = 'experience';</span>
+            <span class="row-count">3 rows</span>
+          </div>
+          <div class="table-content">
+            <div class="record" data-row="1">
+              <div class="record-title">Student Teaching Assistant</div>
+              <div class="record-meta">Columbia Computer Science Department | Fall 2025</div>
+              <ul class="record-list">
+                <li>Assisted in teaching Advanced Programming in the C programming language</li>
+                <li>Held weekly office hours to support students in understanding the course material</li>
+                <li>Collaborated with professor and other TA to grade and review coursework</li>
+              </ul>
+            </div>
+
+            <div class="record" data-row="2">
+              <div class="record-title">Research Software Engineer Intern</div>
+              <div class="record-meta">Voloridge Investment Management | Summer 2025</div>
+              <ul class="record-list">
+                <li>Optimize existing C++ algorithms in through performance analysis and benchmarking to improve runtime
+                  performance</li>
+                <li>Develop new features and enhanced legacy functionality of the existing quantitative finance
+                  algorithms</li>
+                <li>Researched new algorithms to refactor existing codebase features to improve scalability and reduce
+                  tech debt</li>
+              </ul>
+            </div>
+
+            <div class="record" data-row="3">
+              <div class="record-title">Columbia History Lab</div>
+              <div class="record-meta">StartupDB | Sept. 2024 - May 2025</div>
+              <ul class="record-list">
+                <li>Created graph based database from 127 years of US diplomatic relations, extracting relationship
+                  triplets and linking metadata</li>
+                <li>Implemented user interface for access to AI model pipeline.</li>
+                <li>Implemented RAG model to retrieve information from knowledge graph implemented in Neo4j and Python
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Education Table -->
+        <div class="data-table" id="education-table">
+          <div class="table-header" onclick="toggleTable('education-table')">
+            <span>SELECT * FROM portfolio WHERE section = 'education';</span>
+            <span class="row-count">1 rows</span>
+          </div>
+          <div class="table-content">
+            <div class="record" data-row="1">
+              <div class="record-title">Bachelor of Science in Computer Science</div>
+              <div class="record-meta">Columbia University: The Fu Foundation School of Engineering and Applied Science
+                | 2022 - 2026</div>
+              <ul class="record-list">
+                <li>Relevant Coursework: Advanced Database Systems, Cloud Computing, Parallel functional programming,
+                  Computer Science Theory, Programming Language/Translator, Artifical Intelligence</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Projects Table -->
+        <div class="data-table" id="projects-table">
+          <div class="table-header" onclick="toggleTable('projects-table')">
+            <span>SELECT * FROM portfolio WHERE section = 'projects';</span>
+            <span class="row-count">3 rows</span>
+          </div>
+          <div class="table-content">
+            <div class="record" data-row="1">
+              <div class="record-title"><a href="https://github.com/kd993595/postgres-forking">Postgres Forking</a>
+              </div>
+              <div class="record-meta"><a href="https://daplab.cs.columbia.edu/" target="_blank">Daplab
+                  Collaboration</a></div>
+              <ul class="record-list">
+                <li>Implemented database level forking mechanism in Postgres to allow for virtual copies of a live
+                  database</li>
+                <li>Extended SQL interface for managing database forks for driver agnostic usage</li>
+                <li>Developed light-weight Copy-on-Write storage model for forked databases, allowing full read/write
+                  semantics</li>
+              </ul>
+            </div>
+
+            <div class="record" data-row="2">
+              <div class="record-title"><a href="https://github.com/treeform-system/rootdb">RootDB</a></div>
+              <div class="record-meta">Project Lead</div>
+              <ul class="record-list">
+                <li>Created open-source embedded relational database following standard SQL specification</li>
+                <li>Implemented database built for concurrency and ease of use from scratch in golang</li>
+                <li>Interactive web interface for query analysis and visualization</li>
+                <li>Led project, organizing team meetings, and distributed tasks for contributors to work on</li>
+              </ul>
+            </div>
+
+            <div class="record" data-row="3">
+              <div class="record-title"><a href="https://github.com/kd993595/pacmanMachineLearning">Pacman Machine
+                  Learning</a></div>
+              <div class="record-meta">Robotics Competition</div>
+              <ul class="record-list">
+                <li>Training pacman agents using Deep Q-learning and NEAT-ai for neural network agents</li>
+                <li>Optimized AI model to play game of Pacman efficiently with respect to time and points acquired</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Skills Table -->
+        <div class="data-table" id="skills-table">
+          <div class="table-header" onclick="toggleTable('skills-table')">
+            <span>SELECT * FROM portfolio WHERE section = 'skills';</span>
+            <span class="row-count">4 categories</span>
+          </div>
+          <div class="table-content">
+            <div class="skills-grid">
+              <div class="skill-category">
+                <h4>Relational Databases</h4>
+                <span class="skill-tag">PostgreSQL</span>
+                <span class="skill-tag">MySQL</span>
+                <span class="skill-tag">SQLite</span>
+              </div>
+
+              <div class="skill-category">
+                <h4>NoSQL Databases</h4>
+                <span class="skill-tag">MongoDB</span>
+                <span class="skill-tag">Redis</span>
+                <span class="skill-tag">Neo4j</span>
+              </div>
+
+              <div class="skill-category">
+                <h4>Tools & Technologies</h4>
+                <span class="skill-tag">Docker</span>
+                <span class="skill-tag">Git</span>
+                <span class="skill-tag">FastAPI</span>
+              </div>
+
+              <div class="skill-category">
+                <h4>Programming Languages</h4>
+                <span class="skill-tag">Golang</span>
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">C/C++</span>
+                <span class="skill-tag">SQL</span>
+                <span class="skill-tag">Dart</span>
+                <span class="skill-tag">Java</span>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <footer class="footer-query">
+      <span class="keyword">COMMIT;</span>
+      <span class="value">-- Portfolio loaded successfully</span> |
+      <span class="keyword">SELECT</span> <span class="value">VERSION()</span><span class="operator">;</span>
+      <span style="color: var(--gray);">→ Portfolio v1.0</span>
+    </footer>
+  </div>
+
 </body>
 
 </html>

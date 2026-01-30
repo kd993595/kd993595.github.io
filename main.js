@@ -1,54 +1,27 @@
-
-
-document.addEventListener("DOMContentLoaded", function () {
-    let coll = document.getElementsByClassName("collapsible");
-    let i;
-
-    coll[0].classList.toggle("active");
-    let content = coll[0].nextElementSibling;
-    content.style.maxHeight = content.scrollHeight + "px";
-
-    for (i = 0; i < coll.length; i++) {
-        coll[i].addEventListener("click", function () {
-            this.classList.toggle("active");
-            let content = this.nextElementSibling;
-            if (content.style.maxHeight) {
-                content.style.maxHeight = null;
-            } else {
-                content.style.maxHeight = content.scrollHeight + "px";
-            }
-        });
-    }
-});
-
-function calculateSettingAsThemeString({ localStorageTheme, systemSettingDark }) {
-    if (localStorageTheme !== null) {
-        return localStorageTheme;
-    }
-
-    if (systemSettingDark.matches) {
-        return "dark";
-    }
-
-    return "light";
+// Toggle table expansion
+function toggleTable(tableId) {
+  const table = document.getElementById(tableId);
+  table.classList.toggle('collapsed');
 }
 
-const localStorageTheme = localStorage.getItem("theme");
-const systemSettingDark = window.matchMedia("(prefers-color-scheme: dark)");
+// Add animation on scroll
+const observerOptions = {
+  threshold: 0.1,
+  rootMargin: '0px 0px -50px 0px'
+};
 
-let currentThemeSetting = calculateSettingAsThemeString({ localStorageTheme, systemSettingDark });
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.opacity = '1';
+      entry.target.style.transform = 'translateY(0)';
+    }
+  });
+}, observerOptions);
 
-document.querySelector("html").setAttribute("data-theme", currentThemeSetting);
-
-function toggleMode() {
-    const newTheme = currentThemeSetting === "dark" ? "light" : "dark";
-
-    document.querySelector("html").setAttribute("data-theme", newTheme);
-
-    // update in local storage
-    localStorage.setItem("theme", newTheme);
-
-    // update the currentThemeSetting in memory
-    currentThemeSetting = newTheme;
-}
-
+// document.querySelectorAll('.data-table').forEach(table => {
+//   table.style.opacity = '0';
+//   table.style.transform = 'translateY(20px)';
+//   table.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+//   observer.observe(table);
+// });

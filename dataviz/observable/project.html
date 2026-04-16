@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="generator" content="Observable Framework v1.13.4">
+<title>Project Sketches | observable framework demo</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
+<link rel="preload" as="style" href="./_observablehq/theme-slate.55e203da.css">
+<link rel="preload" as="style" href="./_observablehq/stdlib/inputs.f7bf0e12.css">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
+<link rel="stylesheet" type="text/css" href="./_observablehq/theme-slate.55e203da.css">
+<link rel="stylesheet" type="text/css" href="./_observablehq/stdlib/inputs.f7bf0e12.css">
+<link rel="modulepreload" href="./_observablehq/client.f59e2bc8.js">
+<link rel="modulepreload" href="./_observablehq/runtime.607a8173.js">
+<link rel="modulepreload" href="./_observablehq/stdlib.5791a045.js">
+<link rel="modulepreload" href="./_npm/d3@7.9.0/66d82917.js">
+<link rel="modulepreload" href="./_npm/htl@0.3.1/72f4716c.js">
+<link rel="modulepreload" href="./_observablehq/stdlib/inputs.7bb53a4e.js">
+<link rel="modulepreload" href="./_npm/d3-dsv@3.0.1/9cffc2bd.js">
+<link rel="modulepreload" href="./_observablehq/stdlib/zip.1f555417.js">
+<link rel="modulepreload" href="./_npm/isoformat@0.2.1/18cbf477.js">
+<link rel="modulepreload" href="./_npm/jszip@3.10.1/74d78a45.js">
+<link rel="modulepreload" href="./_npm/d3-array@3.2.4/e93ca09f.js">
+<link rel="modulepreload" href="./_npm/d3-axis@3.0.0/0f2de24d.js">
+<link rel="modulepreload" href="./_npm/d3-brush@3.0.0/65eb105b.js">
+<link rel="modulepreload" href="./_npm/d3-chord@3.0.1/7ef8fb2e.js">
+<link rel="modulepreload" href="./_npm/d3-color@3.1.0/aeb57b94.js">
+<link rel="modulepreload" href="./_npm/d3-contour@4.0.2/1d2aed74.js">
+<link rel="modulepreload" href="./_npm/d3-delaunay@6.0.4/87adea64.js">
+<link rel="modulepreload" href="./_npm/d3-dispatch@3.0.1/9ba9c7f3.js">
+<link rel="modulepreload" href="./_npm/d3-drag@3.0.0/4202580c.js">
+<link rel="modulepreload" href="./_npm/d3-ease@3.0.1/cdd7e898.js">
+<link rel="modulepreload" href="./_npm/d3-fetch@3.0.1/b4e2ad9a.js">
+<link rel="modulepreload" href="./_npm/d3-force@3.0.0/5e804d15.js">
+<link rel="modulepreload" href="./_npm/d3-format@3.1.2/3785bf2d.js">
+<link rel="modulepreload" href="./_npm/d3-geo@3.1.1/40599fb3.js">
+<link rel="modulepreload" href="./_npm/d3-hierarchy@3.1.2/e49e792c.js">
+<link rel="modulepreload" href="./_npm/d3-interpolate@3.0.1/8d1e5425.js">
+<link rel="modulepreload" href="./_npm/d3-path@3.1.0/20d3f133.js">
+<link rel="modulepreload" href="./_npm/d3-polygon@3.0.1/7553081f.js">
+<link rel="modulepreload" href="./_npm/d3-quadtree@3.0.1/0dfd751c.js">
+<link rel="modulepreload" href="./_npm/d3-random@3.0.1/3c90ee06.js">
+<link rel="modulepreload" href="./_npm/d3-scale@4.0.2/720b7f0a.js">
+<link rel="modulepreload" href="./_npm/d3-scale-chromatic@3.1.0/ba24c2e7.js">
+<link rel="modulepreload" href="./_npm/d3-selection@3.0.0/4d94e5b7.js">
+<link rel="modulepreload" href="./_npm/d3-shape@3.2.0/6d3a6726.js">
+<link rel="modulepreload" href="./_npm/d3-time@3.1.0/9f03c579.js">
+<link rel="modulepreload" href="./_npm/d3-time-format@4.1.0/07c9626f.js">
+<link rel="modulepreload" href="./_npm/d3-timer@3.0.1/b58a267d.js">
+<link rel="modulepreload" href="./_npm/d3-transition@3.0.1/004da2ac.js">
+<link rel="modulepreload" href="./_npm/d3-zoom@3.0.0/b5786b3f.js">
+<link rel="modulepreload" href="./_npm/internmap@2.0.3/e08981d9.js">
+<link rel="modulepreload" href="./_npm/delaunator@5.1.0/d4ec0aa1.js">
+<link rel="modulepreload" href="./_npm/robust-predicates@3.0.3/42820bfa.js">
+<link rel="icon" href="./_file/observable.1af93621.png" type="image/png" sizes="32x32">
+<script type="module">
+
+import {define} from "./_observablehq/client.f59e2bc8.js";
+import {registerFile} from "./_observablehq/stdlib.5791a045.js";
+
+registerFile("./data/gapminder.zip", {"name":"./data/gapminder.zip","mimeType":"application/zip","path":"./_file/data/gapminder.fff61cc0.zip","lastModified":1776375227244,"size":628162});
+registerFile("./data/gdp-2010.csv", {"name":"./data/gdp-2010.csv","mimeType":"text/csv","path":"./_file/data/gdp-2010.40af869f.csv","lastModified":1776377041167,"size":6125});
+registerFile("./data/life-2010.csv", {"name":"./data/life-2010.csv","mimeType":"text/csv","path":"./_file/data/life-2010.ea124b39.csv","lastModified":1776376974410,"size":6391});
+
+define({id: "7fad1ed5", outputs: ["sentence"], body: () => {
+const sentence = "foo bar baz longer words here".split(" ");
+return {sentence};
+}});
+
+define({id: "910b79f5", inputs: ["view","Inputs","sentence"], outputs: ["num"], body: (view,Inputs,sentence) => {
+const num = view(Inputs.range([0, sentence.length], {step: 1}));
+return {num};
+}});
+
+define({id: "ee652f5c", inputs: ["sentence","num","display","html"], outputs: ["newslice"], body: (sentence,num,display,html) => {
+const newslice = sentence.slice(0,num).join();
+display(html`sentence: ${newslice}`);
+return {newslice};
+}});
+
+define({id: "e8407e9e", inputs: ["FileAttachment"], outputs: ["gapminder"], body: (FileAttachment) => {
+const gapminder = FileAttachment("./data/gapminder.zip").zip();
+return {gapminder};
+}});
+
+define({id: "3e727b4b", inputs: ["display","gapminder"], body: (display,gapminder) => {
+display(gapminder);
+}});
+
+define({id: "93700368", inputs: ["gapminder"], outputs: ["continent"], body: (gapminder) => {
+const continent = gapminder.file("gapminder/continents.csv").csv();
+return {continent};
+}});
+
+define({id: "77725828", inputs: ["display","Inputs","continent"], body: (display,Inputs,continent) => {
+display(Inputs.table(continent));
+}});
+
+define({id: "922a4334", inputs: ["continent","display","html"], outputs: ["countryset","countries"], body: (continent,display,html) => {
+let countryset = new Set();
+for (const row of continent){
+  countryset.add(row["Entity"]);
+}
+let countries = Array.from(countryset);
+display(html`All country names: ${countries.join(", ")}`);
+return {countryset,countries};
+}});
+
+define({id: "b260d704", inputs: ["FileAttachment"], outputs: ["life2010"], body: (FileAttachment) => {
+const life2010 = FileAttachment("./data/life-2010.csv").csv({typed: true});
+return {life2010};
+}});
+
+define({id: "4be03217", inputs: ["display","Inputs","life2010"], body: (display,Inputs,life2010) => {
+display(Inputs.table(life2010));
+}});
+
+define({id: "a4e61133", inputs: ["FileAttachment"], outputs: ["gdp2010"], body: (FileAttachment) => {
+const gdp2010 = FileAttachment("./data/gdp-2010.csv").csv({typed: false});
+return {gdp2010};
+}});
+
+define({id: "3caac1d2", inputs: ["display","Inputs","gdp2010"], body: (display,Inputs,gdp2010) => {
+display(Inputs.table(gdp2010));
+}});
+
+define({id: "afa79459", inputs: ["life2010","gdp2010"], outputs: ["lifes","fulldata"], body: (life2010,gdp2010) => {
+let lifes = new Map();
+for (const row of life2010){
+  lifes.set(row["Entity"], row["Life expectancy"]);
+}
+const fulldata = [];
+for(const row of gdp2010){
+  fulldata.push({"country": row["Entity"], "gdp":row["GDP per capita"], "life":lifes.get(row["Entity"])});
+}
+return {lifes,fulldata};
+}});
+
+define({id: "6ade81fc", inputs: ["view","Inputs"], outputs: ["color"], body: (view,Inputs) => {
+const color = view(Inputs.radio(["red", "green", "blue"], {label: "color"}));
+return {color};
+}});
+
+define({id: "1622db9b", inputs: ["d3","fulldata","color","display"], outputs: ["drawplot"], body: (d3,fulldata,color,display) => {
+function drawplot(){
+  // Specify the chart’s dimensions.
+  const width = 928;
+  const height = 600;
+  const marginTop = 25;
+  const marginRight = 20;
+  const marginBottom = 35;
+  const marginLeft = 40;
+  let ex = d3.extent(fulldata, d => d["gdp"]);
+  let newdom = [ex[1],ex[0]];
+
+  // Prepare the scales for positional encoding.
+  const x = d3.scaleLog()
+    .domain(newdom).nice()
+    .range([marginLeft, width - marginRight]);
+
+  const y = d3.scaleLinear()
+    .domain(d3.extent(fulldata, d => d["life"])).nice()
+    .range([height - marginBottom, marginTop]);
+
+  // Create the SVG container.
+  const svg = d3.create("svg")
+      .attr("viewBox", [0, 0, width, height])
+      .attr("style", "max-width: 100%; height: auto; font: 10px sans-serif;");
+
+  // Create the axes.
+  svg.append("g")
+    .attr("transform", `translate(0,${height - marginBottom})`)
+    .call(d3.axisBottom(x).ticks(width / 80))
+    .call(g => g.select(".domain").remove())
+    .call(g => g.append("text")
+        .attr("x", width)
+        .attr("y", marginBottom - 4)
+        .attr("fill", "currentColor")
+        .attr("text-anchor", "end")
+        .text("GDP →"));
+
+  svg.append("g")
+    .attr("transform", `translate(${marginLeft},0)`)
+    .call(d3.axisLeft(y))
+    .call(g => g.select(".domain").remove())
+    .call(g => g.append("text")
+        .attr("x", -marginLeft)
+        .attr("y", 10)
+        .attr("fill", "currentColor")
+        .attr("text-anchor", "start")
+        .text("↑ Life Expectancy"));
+
+  // Create the grid.
+  svg.append("g")
+    .attr("stroke", "currentColor")
+    .attr("stroke-opacity", 0.1)
+    .call(g => g.append("g")
+      .selectAll("line")
+      .data(x.ticks())
+      .join("line")
+        .attr("x1", d => 0.5 + x(d))
+        .attr("x2", d => 0.5 + x(d))
+        .attr("y1", marginTop)
+        .attr("y2", height - marginBottom))
+    .call(g => g.append("g")
+      .selectAll("line")
+      .data(y.ticks())
+      .join("line")
+        .attr("y1", d => 0.5 + y(d))
+        .attr("y2", d => 0.5 + y(d))
+        .attr("x1", marginLeft)
+        .attr("x2", width - marginRight));
+
+  // Add a layer of dots.
+  svg.append("g")
+      .attr("stroke", `${color}`)
+      .attr("stroke-width", 1.5)
+      .attr("fill", "none")
+    .selectAll("circle")
+    .data(fulldata)
+    .join("circle")
+      .attr("cx", d => x(d.gdp))
+      .attr("cy", d => y(d.life))
+      .attr("r", 3);
+
+    return svg.node();
+}
+
+display(drawplot());
+return {drawplot};
+}});
+
+</script>
+</head>
+<body>
+<input id="observablehq-sidebar-toggle" type="checkbox" title="Toggle sidebar">
+<label id="observablehq-sidebar-backdrop" for="observablehq-sidebar-toggle"></label>
+<nav id="observablehq-sidebar">
+  <ol>
+    <label id="observablehq-sidebar-close" for="observablehq-sidebar-toggle"></label>
+    <li class="observablehq-link"><a href="./">observable framework demo</a></li>
+  </ol>
+  <ol>
+    <li class="observablehq-link"><a href="./example-dashboard">Example dashboard</a></li>
+    <li class="observablehq-link"><a href="./example-report">Example report</a></li>
+    <li class="observablehq-link observablehq-link-active"><a href="./project">Project Sketches</a></li>
+  </ol>
+</nav>
+<script>{const e=document.querySelector("#observablehq-sidebar"),o=document.querySelector("#observablehq-sidebar-toggle"),r=sessionStorage.getItem("observablehq-sidebar");r?o.checked=r==="true":o.indeterminate=!0;for(const t of document.querySelectorAll("#observablehq-sidebar summary")){const s=t.parentElement;switch(sessionStorage.getItem(`observablehq-sidebar:${t.textContent}`)){case"true":s.open=!0;break;case"false":s.classList.contains("observablehq-section-active")||(s.open=!1);break}}addEventListener("beforeunload",()=>sessionStorage.setItem("observablehq-sidebar-scrolly",`${e.scrollTop}`));const a=sessionStorage.getItem("observablehq-sidebar-scrolly");a!=null&&(e.style.cssText="overflow: hidden;",e.scrollTop=+a,e.style.cssText="");}</script>
+<div id="observablehq-center">
+<aside id="observablehq-toc" data-selector="h1:not(:first-of-type)[id], h2:first-child[id], :not(h1) + h2[id]">
+<nav>
+<div>Contents</div>
+<ol>
+<li class="observablehq-secondary-link"><a href="#javascript">Javascript</a></li>
+<li class="observablehq-secondary-link"><a href="#file-attachments">File Attachments</a></li>
+<li class="observablehq-secondary-link"><a href="#life-expectancy">Life expectancy</a></li>
+<li class="observablehq-secondary-link"><a href="#gdp-2010">GDP 2010</a></li>
+<li class="observablehq-secondary-link"><a href="#plotting">Plotting</a></li>
+</ol>
+</nav>
+</aside>
+<main id="observablehq-main" class="observablehq">
+<details>
+  <summary>Details</summary>
+  <img src="./_file/observable.1af93621.png" alt="logo">
+</details>
+<h1 id="grids" tabindex="-1"><a class="observablehq-header-anchor" href="#grids">Grids</a></h1>
+<div class="grid grid-cols-3">
+  <div class="card"><h1 class="red">A</h1></div>
+  <div class="card"><h1 class="green">B</h1></div>
+  <div class="card"><h1>C</h1></div>
+ <div class="card grid-colspan-3"><h1>D</h1></div>
+ <div class="card"><h1>E</h1></div>
+ <div class="card"><h1>F</h1></div>
+ <div class="card"><h1>G</h1></div>
+</div>
+<h1 id="javascript" tabindex="-1"><a class="observablehq-header-anchor" href="#javascript">Javascript</a></h1>
+<div class="observablehq observablehq--block"><!--:7fad1ed5:--></div>
+<div class="observablehq observablehq--block"><!--:910b79f5:--></div>
+<div class="observablehq observablehq--block"><!--:ee652f5c:--></div>
+<h1 id="file-attachments" tabindex="-1"><a class="observablehq-header-anchor" href="#file-attachments">File Attachments</a></h1>
+<div class="observablehq observablehq--block"><!--:e8407e9e:--></div>
+<div class="observablehq observablehq--block"><!--:3e727b4b:--></div>
+<div class="observablehq observablehq--block"><!--:93700368:--></div>
+<div class="observablehq observablehq--block"><!--:77725828:--></div>
+<div class="observablehq observablehq--block"><!--:922a4334:--></div>
+<h1 id="life-expectancy" tabindex="-1"><a class="observablehq-header-anchor" href="#life-expectancy">Life expectancy</a></h1>
+<div class="observablehq observablehq--block"><!--:b260d704:--></div>
+<div class="observablehq observablehq--block"><!--:4be03217:--></div>
+<h1 id="gdp-2010" tabindex="-1"><a class="observablehq-header-anchor" href="#gdp-2010">GDP 2010</a></h1>
+<div class="observablehq observablehq--block"><!--:a4e61133:--></div>
+<div class="observablehq observablehq--block"><!--:3caac1d2:--></div>
+<h1 id="plotting" tabindex="-1"><a class="observablehq-header-anchor" href="#plotting">Plotting</a></h1>
+<div class="observablehq observablehq--block"><!--:afa79459:--></div>
+<div class="observablehq observablehq--block"><!--:6ade81fc:--></div>
+<div class="observablehq observablehq--block"><!--:1622db9b:--></div>
+</main>
+<footer id="observablehq-footer">
+<nav><a rel="prev" href="./example-report"><span>Example report</span></a></nav>
+<div>Built with <a href="https://observablehq.com/" target="_blank" rel="noopener noreferrer">Observable</a> on <a title="2026-04-16T18:36:19">Apr 16, 2026</a>.</div>
+</footer>
+</div>
+</body>
+</html>

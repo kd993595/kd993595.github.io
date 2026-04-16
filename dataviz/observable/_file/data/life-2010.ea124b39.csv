@@ -1,0 +1,244 @@
+Entity,Code,Year,Life expectancy
+Afghanistan,AFG,2010,61.028
+Africa,,2010,58.576
+Albania,ALB,2010,76.562
+Algeria,DZA,2010,74.938
+American Samoa,ASM,2010,73.126
+Americas,,2010,75.79106424
+Andorra,AND,2010,81.461
+Angola,AGO,2010,55.35
+Anguilla,AIA,2010,80.903
+Antigua and Barbuda,ATG,2010,75.823
+Argentina,ARG,2010,75.278
+Armenia,ARM,2010,73.331
+Aruba,ABW,2010,75.017
+Asia,,2010,70.951
+Australia,AUS,2010,81.944
+Austria,AUT,2010,80.622
+Azerbaijan,AZE,2010,70.938
+Bahamas,BHS,2010,72.144
+Bahrain,BHR,2010,76.057
+Bangladesh,BGD,2010,69.881
+Barbados,BRB,2010,78.364
+Belarus,BLR,2010,70.806
+Belgium,BEL,2010,80.072
+Belize,BLZ,2010,72.057
+Benin,BEN,2010,59.318
+Bermuda,BMU,2010,81.087
+Bhutan,BTN,2010,68.384
+Bolivia,BOL,2010,68.007
+Bonaire Sint Eustatius and Saba,BES,2010,76.319
+Bosnia and Herzegovina,BIH,2010,76.031
+Botswana,BWA,2010,60.211
+Brazil,BRA,2010,73.619
+British Virgin Islands,VGB,2010,77.699
+Brunei,BRN,2010,74.74
+Bulgaria,BGR,2010,73.722
+Burkina Faso,BFA,2010,57.096
+Burundi,BDI,2010,57.228
+Cambodia,KHM,2010,66.56
+Cameroon,CMR,2010,55.101
+Canada,CAN,2010,81.322
+Cape Verde,CPV,2010,71.062
+Cayman Islands,CYM,2010,82.546
+Central African Republic,CAF,2010,47.312
+Chad,TCD,2010,50.89
+Channel Islands,OWID_CIS,2010,81.483
+Chile,CHL,2010,78.779
+China,CHN,2010,74.409
+Colombia,COL,2010,75.424
+Comoros,COM,2010,61.862
+Congo,COG,2010,60.093
+Cook Islands,COK,2010,74.256
+Costa Rica,CRI,2010,78.769
+Cote d'Ivoire,CIV,2010,52.964
+Croatia,HRV,2010,76.797
+Cuba,CUB,2010,78.338
+Curacao,CUW,2010,76.964
+Cyprus,CYP,2010,79.43
+Czechia,CZE,2010,77.61
+Democratic Republic of Congo,COD,2010,56.909
+Denmark,DNK,2010,79.416
+Djibouti,DJI,2010,60.062
+Dominica,DMA,2010,74.262
+Dominican Republic,DOM,2010,72.046
+Ecuador,ECU,2010,75.089
+Egypt,EGY,2010,70.349
+El Salvador,SLV,2010,71.21
+Equatorial Guinea,GNQ,2010,55.622
+Eritrea,ERI,2010,62.193
+Estonia,EST,2010,75.311
+Eswatini,SWZ,2010,46.601
+Ethiopia,ETH,2010,61.627
+Europe,,2010,76.265
+Faeroe Islands,FRO,2010,79.47
+Falkland Islands,FLK,2010,80.128
+Fiji,FJI,2010,66.655
+Finland,FIN,2010,80.137
+France,FRA,2010,81.508
+French Guiana,GUF,2010,78.775
+French Polynesia,PYF,2010,75.611
+Gabon,GAB,2010,61.4
+Gambia,GMB,2010,59.637
+Georgia,GEO,2010,71.46
+Germany,DEU,2010,80.124
+Ghana,GHA,2010,61.03
+Gibraltar,GIB,2010,78.935
+Greece,GRC,2010,80.542
+Greenland,GRL,2010,70.422
+Grenada,GRD,2010,72.867
+Guadeloupe,GLP,2010,79.994
+Guam,GUM,2010,77.941
+Guatemala,GTM,2010,71.481
+Guinea,GIN,2010,56.861
+Guinea-Bissau,GNB,2010,54.628
+Guyana,GUY,2010,68.059
+Haiti,HTI,2010,60.511
+Honduras,HND,2010,73.317
+Hong Kong,HKG,2010,82.903
+Hungary,HUN,2010,74.488
+Iceland,ISL,2010,81.801
+India,IND,2010,66.693
+Indonesia,IDN,2010,69.205
+Iran,IRN,2010,73.905
+Iraq,IRQ,2010,68.567
+Ireland,IRL,2010,80.182
+Isle of Man,IMN,2010,80.082
+Israel,ISR,2010,81.463
+Italy,ITA,2010,81.958
+Jamaica,JAM,2010,74.038
+Japan,JPN,2010,82.971
+Jordan,JOR,2010,73.428
+Kazakhstan,KAZ,2010,67.378
+Kenya,KEN,2010,60.959
+Kiribati,KIR,2010,65.769
+Kuwait,KWT,2010,74.358
+Kyrgyzstan,KGZ,2010,68.849
+Laos,LAO,2010,64.306
+Latin America and the Caribbean,,2010,73.977
+Latvia,LVA,2010,72.838
+Lebanon,LBN,2010,78.36
+Lesotho,LSO,2010,45.1
+Liberia,LBR,2010,59.6
+Libya,LBY,2010,72.044
+Liechtenstein,LIE,2010,81.714
+Lithuania,LTU,2010,72.826
+Luxembourg,LUX,2010,80.352
+Macao,MAC,2010,82.704
+Madagascar,MDG,2010,63.388
+Malawi,MWI,2010,55.564
+Malaysia,MYS,2010,74.493
+Maldives,MDV,2010,75.905
+Mali,MLI,2010,55.251
+Malta,MLT,2010,80.868
+Marshall Islands,MHL,2010,71.403
+Martinique,MTQ,2010,80.664
+Mauritania,MRT,2010,62.527
+Mauritius,MUS,2010,73.46
+Mayotte,MYT,2010,78.758
+Mexico,MEX,2010,75.065
+Micronesia (country),FSM,2010,66.471
+Moldova,MDA,2010,69.616
+Monaco,MCO,2010,84.207
+Mongolia,MNG,2010,67.38
+Montenegro,MNE,2010,75.151
+Montserrat,MSR,2010,72.969
+Morocco,MAR,2010,74.382
+Mozambique,MOZ,2010,52.31
+Myanmar,MMR,2010,63.525
+Namibia,NAM,2010,56.665
+Nauru,NRU,2010,58.852
+Nepal,NPL,2010,67.611
+Netherlands,NLD,2010,80.797
+New Caledonia,NCL,2010,75.769
+New Zealand,NZL,2010,80.86
+Nicaragua,NIC,2010,72.428
+Niger,NER,2010,57.333
+Nigeria,NGA,2010,50.896
+Niue,NIU,2010,72.434
+North Korea,PRK,2010,69.571
+North Macedonia,MKD,2010,74.662
+Northern America,,2010,78.916
+Northern Mariana Islands,MNP,2010,73.885
+Norway,NOR,2010,81.156
+Oceania,,2010,76.82
+Oman,OMN,2010,75.682
+Pakistan,PAK,2010,65.264
+Palau,PLW,2010,71.406
+Palestine,PSE,2010,72.788
+Panama,PAN,2010,76.792
+Papua New Guinea,PNG,2010,62.029
+Paraguay,PRY,2010,72.653
+Peru,PER,2010,74.41
+Philippines,PHL,2010,69.823
+Poland,POL,2010,76.33
+Portugal,PRT,2010,79.995
+Puerto Rico,PRI,2010,78.572
+Qatar,QAT,2010,79.108
+Reunion,REU,2010,78.936
+Romania,ROU,2010,74.066
+Russia,RUS,2010,68.715
+Rwanda,RWA,2010,63.433
+Saint Barthlemy,,2010,79.908
+Saint Helena,SHN,2010,79.738
+Saint Kitts and Nevis,KNA,2010,74.305
+Saint Lucia,LCA,2010,74.852
+Saint Martin (French part),MAF,2010,79.794
+Saint Pierre and Miquelon,SPM,2010,79.957
+Saint Vincent and the Grenadines,VCT,2010,71.776
+Samoa,WSM,2010,71.663
+San Marino,SMR,2010,83.257
+Sao Tome and Principe,STP,2010,67.43
+Saudi Arabia,SAU,2010,73.917
+Senegal,SEN,2010,64.284
+Serbia,SRB,2010,74.101
+Seychelles,SYC,2010,72.892
+Sierra Leone,SLE,2010,49.382
+Singapore,SGP,2010,81.833
+Sint Maarten (Dutch part),SXM,2010,77.643
+Slovakia,SVK,2010,75.493
+Slovenia,SVN,2010,79.421
+Solomon Islands,SLB,2010,70.674
+Somalia,SOM,2010,53.99
+South Africa,ZAF,2010,57.669
+South Korea,KOR,2010,80.432
+South Sudan,SSD,2010,54.8
+Spain,ESP,2010,81.9
+Sri Lanka,LKA,2010,75.439
+Sudan,SDN,2010,62.764
+Suriname,SUR,2010,70.465
+Sweden,SWE,2010,81.514
+Switzerland,CHE,2010,82.269
+Syria,SYR,2010,72.108
+Taiwan,TWN,2010,78.753
+Tajikistan,TJK,2010,68.736
+Tanzania,TZA,2010,58.584
+Thailand,THA,2010,74.184
+Timor,TLS,2010,67.186
+Togo,TGO,2010,57.468
+Tokelau,TKL,2010,79.808
+Tonga,TON,2010,70.059
+Trinidad and Tobago,TTO,2010,71.946
+Tunisia,TUN,2010,75.041
+Turkey,TUR,2010,74.507
+Turkmenistan,TKM,2010,66.657
+Turks and Caicos Islands,TCA,2010,79.081
+Tuvalu,TUV,2010,64.551
+Uganda,UGA,2010,57.099
+Ukraine,UKR,2010,69.361
+United Arab Emirates,ARE,2010,76.332
+United Kingdom,GBR,2010,80.352
+United States,USA,2010,78.652
+United States Virgin Islands,VIR,2010,78.602
+Uruguay,URY,2010,76.75
+Uzbekistan,UZB,2010,69.672
+Vanuatu,VUT,2010,69.123
+Vatican,VAT,2010,73.12
+Venezuela,VEN,2010,73.134
+Vietnam,VNM,2010,74.837
+Wallis and Futuna,WLF,2010,78.066
+Western Sahara,ESH,2010,67.372
+World,OWID_WRL,2010,69.934
+Yemen,YEM,2010,65.549
+Zambia,ZMB,2010,55.655
+Zimbabwe,ZWE,2010,50.64
